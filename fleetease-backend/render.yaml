@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: fleetease-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: DB_USER
+        value: fleetease_user
+      - key: DB_PASS
+        generateValue: true
+      - key: DB_NAME
+        value: fleetease_db
+      - key: DB_HOST
+        fromDatabase:
+          name: fleetease-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: fleetease-db
+          property: port
+      - key: JWT_SECRET
+        generateValue: true
+
+  - type: psql
+    name: fleetease-db
+    plan: free
+    databaseName: fleetease_db
+    user: fleetease_user
