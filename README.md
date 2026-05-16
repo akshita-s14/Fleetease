@@ -116,7 +116,7 @@ docker-compose down
 |---|---|
 | Frontend | React.js |
 | Backend | Node.js + Express |
-| Database | MySQL |
+| Database | PostgreSQL |
 | Containerization | Docker + Docker Compose |
 | Web Server | nginx (production frontend) |
 | CI/CD | GitHub Actions |
