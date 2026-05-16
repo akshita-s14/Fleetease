@@ -1,0 +1,44 @@
+
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: fleetease
+    ports:
+      - "5432:5432"
+    volumes:
+      - fleetease_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d fleetease"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./fleetease-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_USER=postgres
+      - DB_PASS=example
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=fleetease
+      - JWT_SECRET=change_this_secret
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build: ./fleetease-frontend/web
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  fleetease_db:

@@ -160,7 +160,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-4 mb-2">
-             <button onClick={handleSearch} className="btn btn-primary btn-lg fw-bold px-5 py-3 rounded-pill text-white shadow" style={{ background: 'linear-gradient(93deg, #53b2fe, #065af3)', fontSize: '1.2rem', letterSpacing: '1px' }}>
+             <button onClick={handleSearch} className="btn btn-primary btn-lg fw-bold px-5 py-3 rounded-pill text-white shadow">
                SEARCH
              </button>
           </div>
