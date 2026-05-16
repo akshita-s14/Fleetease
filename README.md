@@ -12,7 +12,6 @@ A full-stack fleet management system built with React and Node.js, containerized
 ---
 
 ## 📁 Project Structure
-
 ```
 Fleetease/
 ├── fleetease-backend/        # Node.js REST API
