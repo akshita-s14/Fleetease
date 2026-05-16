@@ -120,7 +120,6 @@ docker-compose down
 | Containerization | Docker + Docker Compose |
 | Web Server | nginx (production frontend) |
 | CI/CD | GitHub Actions |
-| Cloud | AWS EC2 |
 | Version Control | Git + GitHub |
 
 ---
