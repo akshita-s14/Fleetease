@@ -11,6 +11,12 @@ A full-stack fleet management system built with React and Node.js, containerized
 
 ---
 
+## 🚀 Live Demo
+**[Click here to view the live deployed application!](https://fleetease-tau.vercel.app/)**
+*(Frontend deployed on Vercel, Backend hosted on Render, Database securely managed via Neon.tech Serverless Postgres).*
+
+---
+
 ## 📁 Project Structure
 ```
 Fleetease/
