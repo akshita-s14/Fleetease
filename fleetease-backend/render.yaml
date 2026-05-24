@@ -23,8 +23,8 @@ services:
       - key: JWT_SECRET
         generateValue: true
 
-  - type: psql
-    name: fleetease-db
+databases:
+  - name: fleetease-db
     plan: free
     databaseName: fleetease_db
     user: fleetease_user
