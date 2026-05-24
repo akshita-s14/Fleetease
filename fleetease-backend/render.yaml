@@ -1,6 +1,7 @@
 services:
   - type: web
     name: fleetease-backend
+    rootDir: fleetease-backend
     env: node
     plan: free
     buildCommand: npm install
