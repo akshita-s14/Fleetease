@@ -7,24 +7,14 @@ services:
     startCommand: node server.js
     envVars:
       - key: DB_USER
-        value: fleetease_user
+        sync: false
       - key: DB_PASS
-        generateValue: true
+        sync: false
       - key: DB_NAME
-        value: fleetease_db
+        sync: false
       - key: DB_HOST
-        fromDatabase:
-          name: fleetease-db
-          property: host
+        sync: false
       - key: DB_PORT
-        fromDatabase:
-          name: fleetease-db
-          property: port
+        value: "5432"
       - key: JWT_SECRET
         generateValue: true
-
-databases:
-  - name: fleetease-db
-    plan: free
-    databaseName: fleetease_db
-    user: fleetease_user
