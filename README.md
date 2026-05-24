@@ -1,12 +1,5 @@
 # 🚛 FleetEase — Fleet Management System
 
-![CI/CD Pipeline](https://github.com/akshita-s14/Fleetease/actions/workflows/deploy.yml/badge.svg)
-![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
-![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?logo=node.js&logoColor=white)
-![React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=black)
-![nginx](https://img.shields.io/badge/Server-nginx-009639?logo=nginx&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF?logo=github-actions&logoColor=white)
-
 A full-stack fleet management system built with React and Node.js, containerized with Docker, and deployed via an automated CI/CD pipeline using GitHub Actions.
 
 ---
